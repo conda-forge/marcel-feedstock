@@ -1,5 +1,5 @@
 {% set name = "marcel" %}
-{% set version = "0.24.2" %}
+{% set version = "0.24.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/geophile/marcel/archive/v{{ version }}.tar.gz
-  sha256: f4d5a05910ed9ca61e10e3be3c88b1aa5c191f1f3a3811c3dedae0cd62036187
+  sha256: 4c9961acea861ac2518775fb2af559659aebbad9f63d47ab4dd448efd9565ca6
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
     - dill
   run:
-    - python >=3.7
+    - python >=3.9
     - dill
     - psutil
 
