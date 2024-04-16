@@ -1,5 +1,5 @@
 {% set name = "marcel" %}
-{% set version = "0.24.4" %}
+{% set version = "0.24.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/geophile/marcel/archive/v{{ version }}.tar.gz
-  sha256: 188833f80fa621e44d9716d8ef2a045357de187f60f49a2c72324067d13afddd
+  sha256: b16680f42812e5455a956e07f4d14e7777f91e7cc2f942fd4854626f585c9a21
 
 build:
   noarch: python
