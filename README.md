@@ -3,7 +3,7 @@ About marcel-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/marcel-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.marceltheshell.org
+Home: https://www.marceltheshell.org/
 
 Package license: GPL-3.0-only
 
