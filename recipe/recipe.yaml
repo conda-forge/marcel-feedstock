@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: marcel
+  version: 0.33.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/geophile/marcel/archive/v${{ version }}.tar.gz
+  sha256: 6a5b0d95038d9792ae7ebc9ab1a4465238d92e1e5d59014922701c64cc838726
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - dill
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - dill
+    - psutil
+    - prompt_toolkit
+
+tests:
+  - python:
+      imports:
+        - marcel
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: A model shell that passes Python values; lists, tuples, strings, and numbers; but also objects representing files and processes.
+  license: GPL-3.0-only
+  license_file:
+    - COPYING
+    - LICENSE
+  homepage: https://www.marceltheshell.org
+  repository: https://github.com/geophile/marcel
+
+extra:
+  recipe-maintainers:
+    - thewchan
