@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: marcel
-  version: "0.36.1"
+  version: "0.36.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/geophile/marcel/archive/v${{ version }}.tar.gz
-  sha256: 77dcbab2245dbcc81d0e65595ad0a6cfd21ad5cbe7c57da2eb4e23c354ddbbac
+  sha256: 1aac9f29a32de08057859924ea67f07e42da7e626aa16e668ddbb3063a29d978
 
 build:
   number: 0
